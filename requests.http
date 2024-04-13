@@ -1,0 +1,28 @@
+@url=http://localhost:8080/employee
+
+POST {{url}}/_creates
+Content-Type: application/json
+
+{
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "emailId": "janedoe@example.com"
+}
+
+###
+GET {{url}}/_search
+Content-Type: application/json
+
+###
+GET {{url}}/_search/1
+Content-Type: application/json
+
+###
+PUT {{url}}/_update/5
+Content-Type: application/json
+
+{
+    "firstName": "Pane",
+    "lastName": "Doe",
+    "emailId": "janedoe@example.com"
+}
